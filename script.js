@@ -5,11 +5,13 @@ const allLinks$ =document.querySelectorAll('.link-page1')
 const firstSection$=document.getElementById('first-section')
 const secondSection$=document.getElementById('second-section')
 const buttonBackSecondPage$=document.getElementById('buttonback-page2')
+const buttoncartSecondPage$=document.getElementById('buttoncart-page2')
 
 
 
-
-
+buttoncartSecondPage$.addEventListener('click',()=>{
+    contanimate$.classList.toggle('show')
+})
 /** funciones para llamar al carrito desde diferentes botones */
 buttonCart$.addEventListener('click',()=>{
     contanimate$.classList.toggle('show')
