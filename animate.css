@@ -1,0 +1,13 @@
+.main-contain{
+    display: flex;
+}
+
+.main-container-page2.animate{
+    display: flex;
+}
+.main-container.animate{
+    display: none;
+}
+.main-container-page2{
+    display: none;
+}
