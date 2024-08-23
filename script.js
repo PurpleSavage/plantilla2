@@ -1,26 +1,24 @@
-const buttonCart$=document.getElementById('buttoncart')
-const contanimate$= document.getElementById('contanimate')
-const cartHeaderCont$=document.getElementById('cartHeaderCont')
+const buttonCart$=document.querySelectorAll('.buttoncart')
+const contanimate$= document.getElementById('modal-carrito')
+
 const allLinks$ =document.querySelectorAll('.link-page1')
 const firstSection$=document.getElementById('first-section')
 const secondSection$=document.getElementById('second-section')
 const buttonBackSecondPage$=document.getElementById('buttonback-page2')
-const buttoncartSecondPage$=document.getElementById('buttoncart-page2')
 
 
 
-buttoncartSecondPage$.addEventListener('click',()=>{
-    contanimate$.classList.toggle('show')
-})
+
+
 /** funciones para llamar al carrito desde diferentes botones */
-buttonCart$.addEventListener('click',()=>{
-    contanimate$.classList.toggle('show')
+buttonCart$.forEach(element=>{
+    element.addEventListener('click',()=>{
+        console.log("hola")
+        contanimate$.classList.toggle('show')
+    })
 })
 contanimate$.addEventListener('click',(e)=>{
     e.stopPropagation();
-    contanimate$.classList.toggle('show')
-})
-cartHeaderCont$.addEventListener('click',(e)=>{
     contanimate$.classList.toggle('show')
 })
 
@@ -29,6 +27,7 @@ cartHeaderCont$.addEventListener('click',(e)=>{
 function setAnimate(){
     firstSection$.classList.toggle('animate')
     secondSection$.classList.toggle('animate')
+    contanimate$.classList.remove('show')
 }
 
 
